@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Register</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="frame">
+            <div class="nav">
+                <ul class="links">
+                    <li class="signin-active"><a href="#" id="signin-link" class="btn">Sign in</a></li>
+                    <li class="signup-inactive"><a href="#" id="signup-link" class="btn">Sign up</a></li>
+                </ul>
+            </div>
+            <div class="form-container">
+                
+                <form id="signin-form" class="form-signin active" action="index.html" method="post">
+                    <label for="username"></label>
+                    <input class="form-styling" type="text" name="username" placeholder="username"/>
+                    <label for="password"></label>
+                    <input class="form-styling" type="password" name="password" placeholder="password"/>
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="checkbox"/>
+                        <label for="checkbox"><span class="ui"></span>Keep me signed in</label>
+                    </div>
+                    <div class="btn-animate">
+                        <button class="btn-signin" href="" type="submit">Sign in</button>
+                    </div>
+                </form>
+
+                <form id="signup-form" class="form-signup" action="admin/index.html" method="post">
+                    <label for="fullname"></label>
+                    <input class="form-styling" type="text" name="fullname" placeholder="Full Name"/>
+                    <label for="email"></label>
+                    <input class="form-styling" type="email" name="email" placeholder="Email"/>
+                    <label for="password"></label>
+                    <input class="form-styling" type="password" name="password" placeholder="Password"/>
+                    <label for="confirmpassword"></label>
+                    <input class="form-styling" type="password" name="confirmpassword" placeholder="Placeholder"/>
+                    <div class="btn-animate">
+                        <button class="btn-signup" href="" type="submit">Sign Up</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="forgot">
+                <a href="#">Forgot your password?</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('signin-link').addEventListener('click', function() {
+            document.getElementById('signin-form').classList.add('active');
+            document.getElementById('signup-form').classList.remove('active');
+        });
+        document.getElementById('signup-link').addEventListener('click', function() {
+            document.getElementById('signup-form').classList.add('active');
+            document.getElementById('signin-form').classList.remove('active');
+        });
+    </script>
+</body>
+</html>
